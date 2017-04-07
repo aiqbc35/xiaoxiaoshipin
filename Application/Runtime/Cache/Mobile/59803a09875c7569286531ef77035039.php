@@ -46,9 +46,6 @@
             height: 179.25px;
         }
     </style>
-    <script type="text/javascript">
-        var reguser = "<?php echo U('User/add');?>";
-    </script>
   </head>
   <body>
    <style type="text/css">
@@ -142,7 +139,6 @@
 
     <div class="page">
         <header class="bar bar-nav">
-              <a class="icon icon-me pull-left open-panel" data-panel="#panel-left-demo"></a>
                 <h1 class="title">Men magazine</h1>
         </header>
         		<nav class="bar bar-tab">
@@ -158,10 +154,10 @@
                 <span class="icon icon-browser"></span>
                 <span class="tab-label">高速专线</span>
             </a>
-<!--             <a class="tab-item external <?php if($videolist == 1): ?>active<?php endif; ?>" href="<?php echo U('Index/videoList');?>">
+            <a class="tab-item external <?php if($videolist == 1): ?>active<?php endif; ?>" href="<?php echo U('Index/videoList');?>">
                 <span class="icon icon-me"></span>
                 <span class="tab-label">会员中心</span>
-            </a> -->
+            </a>
             <a class="tab-item external <?php if($about == 1): ?>active<?php endif; ?>" href="<?php echo U('About/index');?>">
                 <span class="icon icon-star"></span>
                 <span class="tab-label">收藏</span>
@@ -190,42 +186,6 @@
         </div>
         
     </div>
-<div class="panel-overlay"></div>
-<!-- Left Panel with Reveal effect -->
-<div class="panel panel-left panel-reveal theme-dark" id='panel-left-demo'>
-  <div class="content-block">
-    <div class="list-block">
-    <ul>
-        <!-- Text inputs -->
-        <li>
-          <div class="item-content">
-            <div class="item-media"><i class="icon icon-form-name"></i></div>
-            <div class="item-inner">
-              <div class="item-input">
-                <input type="text" placeholder="请输入邮箱">
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="item-content">
-            <div class="item-media"><i class="icon icon-form-name"></i></div>
-            <div class="item-inner">
-              <div class="item-input">
-                <input type="password" placeholder="请输入密码">
-              </div>
-            </div>
-          </div>
-        </li>                
-    </ul>
-    <button class="button button-fill" style="margin-left: 2rem;margin-top: .8rem;width: 6rem;height: 2rem;">登录</button>
-    <button class="button button-success" id="reguserput" style="margin-left: 2rem;margin-top: .8rem;width: 6rem;height: 2rem;">注册</button>
-    </div>
-  </div>
-  <div class="list-block">
-    <!-- .... -->
-  </div>
-</div>
     <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
     <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
     <script src="/Public/js/public.js"></script>

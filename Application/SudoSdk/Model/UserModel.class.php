@@ -17,7 +17,7 @@ class UserModel extends Model{
 			if (M('user')->where(array('username'=>$data['username']))->find()) {
 				$info['status'] = 4;
 				$info['msg'] = '用户名已被注册';
-				renturn $info;
+				return $info;
 			}
 
 

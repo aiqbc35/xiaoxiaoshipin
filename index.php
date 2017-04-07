@@ -22,5 +22,5 @@ define('APP_PATH','./Application/');
 
 
 // 引入ThinkPHP入口文件
-require './ThinkPHP/ThinkPHP.php';
+require './CoreSdk/ThinkPHP.php';
 

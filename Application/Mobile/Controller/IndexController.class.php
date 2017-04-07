@@ -23,6 +23,16 @@ class IndexController extends Controller {
         $this->display('videoList');
    }
 
+   public function login ()
+   {
+      $this->display('login');
+   }
+
+   public function reg ()
+   {
+      $this->display('reg');
+   } 
+
    public function video ()
    {
        $this->videolist = 1;

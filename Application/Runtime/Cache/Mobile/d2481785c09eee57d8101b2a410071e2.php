@@ -59,7 +59,15 @@
             </a>
             <a class="tab-item external <?php if($videolist == 1): ?>active<?php endif; ?>" href="<?php echo U('Index/videoList');?>">
                 <span class="icon icon-computer"></span>
-                <span class="tab-label">视频</span>
+                <span class="tab-label">共享线路</span>
+            </a>
+            <a class="tab-item external <?php if($videolist == 1): ?>active<?php endif; ?>" href="<?php echo U('Index/videoList');?>">
+                <span class="icon icon-browser"></span>
+                <span class="tab-label">高速专线</span>
+            </a>
+            <a class="tab-item external <?php if($useract == 1): ?>active<?php endif; ?>" href="<?php echo U('Index/videoList');?>">
+                <span class="icon icon-me"></span>
+                <span class="tab-label">会员中心</span>
             </a>
             <a class="tab-item external <?php if($about == 1): ?>active<?php endif; ?>" href="<?php echo U('About/index');?>">
                 <span class="icon icon-star"></span>
