@@ -1,0 +1,244 @@
+<include file="Common/header" />
+    <header>
+      <div class="container">
+          <div class="title">Men magazine</div>
+      </div>
+    </header>
+    <div class="container">
+          <div class="header-box">
+              欢迎访问Men magazine!
+              <p>
+                Men magazine自动适配PC、平板、手机访问，最新网址是：http://www.qslist.info;
+              </p>
+              <p>
+                为防止网址被封导致迷路，本站提供二种永久找回方式。<br/>方式一：请发送任意内容至qslistlink@mail.ru自动获取最新网址(敬请将本邮件添加至您邮箱以防忘记).<br/>
+                方式二：最新网址发布站：http://ameblo.jp/qslistlink/<br/>
+              </p>
+          </div>
+    </div>
+    <div class="container">
+        <div class="wrapper hline2">
+            <h2>Top 6 Films</h2>
+            <div class="row" id="topmovie">
+                  <!-- <div class="col-md-2">
+                    <a href="">
+                      <img src="/Public/page1_pic1.jpg" class="img1" alt="">
+                    </a>
+                    <p class="txt2">
+                        <a href="#">this is demothis is demothis is demothis is demo</a>
+                    </p>
+                  </div>
+                  <div class="col-md-2">
+                      <a href="">
+                      <img src="/Public/page1_pic1.jpg" class="img1" alt="">
+                    </a>
+                    <p class="txt2">
+                        <a href="#">this is demothis is demothis is demothis is demo</a>
+                    </p>
+                  </div>
+                  <div class="col-md-2">
+                      <a href="">
+                      <img src="/Public/page1_pic1.jpg" class="img1" alt="">
+                    </a>
+                    <p class="txt2">
+                        <a href="#">this is demothis is demothis is demothis is demo</a>
+                    </p>
+                  </div>
+                  <div class="col-md-2">
+                      <a href="">
+                      <img src="/Public/page1_pic1.jpg" class="img1" alt="">
+                    </a>
+                    <p class="txt2">
+                        <a href="#">this is demothis is demothis is demothis is demo</a>
+                    </p>
+                  </div>
+                  <div class="col-md-2">
+                      <a href="">
+                      <img src="/Public/page1_pic1.jpg" class="img1" alt="">
+                    </a>
+                    <p class="txt2">
+                        <a href="#">this is demothis is demothis is demothis is demo</a>
+                    </p>
+                  </div>
+                  <div class="col-md-2">
+                      <a href="">
+                      <img src="/Public/page1_pic1.jpg" class="img1" alt="">
+                    </a>
+                    <p class="txt2">
+                        <a href="#">this is demothis is demothis is demothis is demo</a>
+                    </p>
+                  </div> -->
+            </div>
+        </div>
+        
+        <div class="wrapper">
+            <h2>NEW MOVIE</h2>
+            <div class="row">
+                <div class="col-md-2">
+                      <a href="">
+                      <img src="/Public/page1_pic1.jpg" class="img1" alt="">
+                    </a>
+                    <p class="txt2">
+                        <a href="#">this is demothis is demothis is demothis is demo</a>
+                    </p>
+                  </div>
+                  <div class="col-md-2">
+                      <a href="">
+                      <img src="/Public/page1_pic1.jpg" class="img1" alt="">
+                    </a>
+                    <p class="txt2">
+                        <a href="#">this is demothis is demothis is demothis is demo</a>
+                    </p>
+                  </div>
+                  <div class="col-md-2">
+                      <a href="">
+                      <img src="/Public/page1_pic1.jpg" class="img1" alt="">
+                    </a>
+                    <p class="txt2">
+                        <a href="#">this is demothis is demothis is demothis is demo</a>
+                    </p>
+                  </div>
+                  <div class="col-md-2">
+                      <a href="">
+                      <img src="/Public/page1_pic1.jpg" class="img1" alt="">
+                    </a>
+                    <p class="txt2">
+                        <a href="#">this is demothis is demothis is demothis is demo</a>
+                    </p>
+                  </div>
+                  <div class="col-md-2">
+                      <a href="">
+                      <img src="/Public/page1_pic1.jpg" class="img1" alt="">
+                    </a>
+                    <p class="txt2">
+                        <a href="#">this is demothis is demothis is demothis is demo</a>
+                    </p>
+                  </div>
+                  <div class="col-md-2">
+                      <a href="">
+                      <img src="/Public/page1_pic1.jpg" class="img1" alt="">
+                    </a>
+                    <p class="txt2">
+                        <a href="#">this is demothis is demothis is demothis is demo</a>
+                    </p>
+                  </div>
+                  <div class="col-md-2">
+                      <a href="">
+                      <img src="/Public/page1_pic1.jpg" class="img1" alt="">
+                    </a>
+                    <p class="txt2">
+                        <a href="#">this is demothis is demothis is demothis is demo</a>
+                    </p>
+                  </div>
+                  <div class="col-md-2">
+                      <a href="">
+                      <img src="/Public/page1_pic1.jpg" class="img1" alt="">
+                    </a>
+                    <p class="txt2">
+                        <a href="#">this is demothis is demothis is demothis is demo</a>
+                    </p>
+                  </div>
+                  <div class="col-md-2">
+                      <a href="">
+                      <img src="/Public/page1_pic1.jpg" class="img1" alt="">
+                    </a>
+                    <p class="txt2">
+                        <a href="#">this is demothis is demothis is demothis is demo</a>
+                    </p>
+                  </div>
+                  <div class="col-md-2">
+                      <a href="">
+                      <img src="/Public/page1_pic1.jpg" class="img1" alt="">
+                    </a>
+                    <p class="txt2">
+                        <a href="#">this is demothis is demothis is demothis is demo</a>
+                    </p>
+                  </div>
+                  <div class="col-md-2">
+                      <a href="">
+                      <img src="/Public/page1_pic1.jpg" class="img1" alt="">
+                    </a>
+                    <p class="txt2">
+                        <a href="#">this is demothis is demothis is demothis is demo</a>
+                    </p>
+                  </div>
+                  <div class="col-md-2">
+                      <a href="">
+                      <img src="/Public/page1_pic1.jpg" class="img1" alt="">
+                    </a>
+                    <p class="txt2">
+                        <a href="#">this is demothis is demothis is demothis is demo</a>
+                    </p>
+                  </div>
+                  <div class="col-md-2">
+                      <a href="">
+                      <img src="/Public/page1_pic1.jpg" class="img1" alt="">
+                    </a>
+                    <p class="txt2">
+                        <a href="#">this is demothis is demothis is demothis is demo</a>
+                    </p>
+                  </div>
+                  <div class="col-md-2">
+                      <a href="">
+                      <img src="/Public/page1_pic1.jpg" class="img1" alt="">
+                    </a>
+                    <p class="txt2">
+                        <a href="#">this is demothis is demothis is demothis is demo</a>
+                    </p>
+                  </div>
+                  <div class="col-md-2">
+                      <a href="">
+                      <img src="/Public/page1_pic1.jpg" class="img1" alt="">
+                    </a>
+                    <p class="txt2">
+                        <a href="#">this is demothis is demothis is demothis is demo</a>
+                    </p>
+                  </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <nav role="navigation">
+              <ul class="cd-pagination">
+                <li class="button"><a class="disabled" href="#0">Prev</a></li>
+                <li><a class="current" href="#0">1</a></li>
+                <li><a href="#0">2</a></li>
+                <li><a href="#0">3</a></li>
+                <li><a href="#0">4</a></li>
+                <li><span>...</span></li>
+                <li><a href="#0">20</a></li>
+                <li class="button"><a href="#0">Next</a></li>
+              </ul>
+            </nav> <!-- cd-pagination-wrapper -->
+
+
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        var  topUrl = "{:U('getTop')}";
+        window.onload=function(){ 
+
+          $.get(topUrl, function(data) {
+              if (data.total > 0) {
+                  _html = createTop(data);                 
+                  $("#topmovie").append(_html);
+
+              }
+          },'json');
+
+
+        }
+
+        function createTop (data){
+            var _tophtml = '';
+            $.each(data.list, function(index, val) {
+               _tophtml += '<div class="col-md-2"><a href="">';
+               _tophtml += '<img src="'+data.imgservice+val.image+'" class="img1" alt=""></a><p class="txt2">';
+              _tophtml += '<a href="#">'+val.name+'</a></p></div>'
+            });
+            return _tophtml;
+        }
+
+    </script>
+<include file="Common/footer" />

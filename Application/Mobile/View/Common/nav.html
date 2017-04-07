@@ -1,0 +1,22 @@
+		<nav class="bar bar-tab">
+            <a class="tab-item external <if condition="$home eq 1">active</if>" href="{:U('Index/index')}">
+                <span class="icon icon-home"></span>
+                <span class="tab-label">首页</span>
+            </a>
+            <a class="tab-item external <if condition="$videolist eq 1">active</if>" href="{:U('Index/videoList')}">
+                <span class="icon icon-computer"></span>
+                <span class="tab-label">共享线路</span>
+            </a>
+            <a class="tab-item external <if condition="$videolist eq 1">active</if>" href="{:U('Index/videoList')}">
+                <span class="icon icon-browser"></span>
+                <span class="tab-label">高速专线</span>
+            </a>
+<!--             <a class="tab-item external <if condition="$videolist eq 1">active</if>" href="{:U('Index/videoList')}">
+                <span class="icon icon-me"></span>
+                <span class="tab-label">会员中心</span>
+            </a> -->
+            <a class="tab-item external <if condition="$about eq 1">active</if>" href="{:U('About/index')}">
+                <span class="icon icon-star"></span>
+                <span class="tab-label">收藏</span>
+            </a>
+        </nav>

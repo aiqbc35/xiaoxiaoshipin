@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="ThemeBucket">
+    <link rel="shortcut icon" href="#" type="image/png">
+
+    <title>Login</title>
+
+    <link href="__PUBLIC__/adminex/css/style.css" rel="stylesheet">
+    <link href="__PUBLIC__/adminex/css/style-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="__PUBLIC__/adminex/js/html5shiv.js"></script>
+    <script src="__PUBLIC__/adminex/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="login-body">
+<div class="container">
+
+    <div class="form-signin">
+        <div class="form-signin-heading text-center">
+            <h1 class="sign-title">Sign In</h1>
+            <img src="__PUBLIC__/adminex/images/login-logo.png" alt=""/>
+        </div>
+        <div class="login-wrap">
+            <input type="text" class="form-control" name="username" placeholder="User ID" autofocus>
+            <input type="password" class="form-control" name="passwd" placeholder="Password">
+
+            <button class="btn btn-lg btn-login btn-block" type="button">
+                <i class="fa fa-check"></i>
+            </button>
+
+        </div>       
+
+    </div>
+
+</div>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="__PUBLIC__/adminex/js/jquery-1.10.2.min.js"></script>
+<script src="__PUBLIC__/adminex/js/bootstrap.min.js"></script>
+<script src="__PUBLIC__/adminex/js/modernizr.min.js"></script>
+<script src="__PUBLIC__/layer/layer.js"></script>
+<script src="__PUBLIC__/js/js.js"></script>
+<script type="text/javascript">
+  var url = "{:U('getLogin')}";
+
+  $(":button").click(function(event) {
+       var username = $("input[name='username']").val();
+       var pwd = $("input[name='passwd']").val();
+
+       if (username == '' || pwd == '') {
+          
+          bulealert('用户名及密码不能为空！');
+
+       }else{
+          $.ajax({
+            url: url,
+            type: 'POST',
+            dataType: 'json',
+            data: {username: username,passwd:pwd},
+            beforeSend:function(xhr){
+                var index = layer.load(1, {
+                      shade: [0.1,'#fff'] //0.1透明度的白色背景
+                    });
+            }
+          })
+          .done(function(e) {
+            
+            layer.closeAll('loading');
+            if (e.status == 1) {
+              window.location.href = e.info;
+            }else{
+              bulealert(e.info);
+            }
+            
+            
+          })
+          .fail(function() {
+            layer.closeAll('loading');
+            bulealert('网络错误！');
+
+          });         
+
+       }
+
+  });
+</script>
+</body>
+</html>

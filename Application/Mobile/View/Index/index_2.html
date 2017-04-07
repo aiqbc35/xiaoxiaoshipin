@@ -1,0 +1,76 @@
+<include file="Common/header" />
+    <div class="page">
+        <header class="bar bar-nav">
+                <h1 class="title">Men magazine</h1>
+        </header>
+        <include file="Common/nav" />
+        <!------Slideshow------>
+        <div class="content native-scroll" id="">
+            <div class="swiper-container swiper-container-horizontal" data-space-between="10">
+              <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+                
+              </div>
+                <div class="swiper-pagination">
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                </div>
+            </div>
+            <!----END Slideshow---->
+            <!----NEW VIDEO------>
+            <div class="newvideo">
+                                            
+            </div>
+            <!-----END NEWVIDEO------>
+            
+            <a href="{:U('videoList')}" class="button-more ">点击查看更多<span class="icon icon-right"></span></a>
+                           
+        </div>
+        
+    </div>
+
+    <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+    <script src="http://m.sui.taobao.org/assets/js/demos.js"></script>
+<script type="text/javascript">
+  var newTopUrl = "{:U('newTopList')}";
+  var videoUrl = "{:U('video')}";
+  var newListUrl = "{:U('newList')}";
+  $.showPreloader();
+  $(function(){
+
+      $.get(newTopUrl, function(data) {
+            var _tophtml = '';
+            var topnewlen = data.list.length;
+           $.each(data.list, function(index, val) {
+              _tophtml += '<div class="swiper-slide" style="width: 375px; margin-right: 10px;">';
+              _tophtml += '<a href="'+videoUrl+'?id='+val.id+'"><img src="/Uploads/'+val.image+'" alt="" style="width: 100%;height: 8rem;"></a></div>';
+           });
+           $(".swiper-wrapper").append(_tophtml);
+           var _topspan = '';
+           for (var i = 1; i < topnewlen; i++) {
+              _topspan += '<span class="swiper-pagination-bullet"></span>';
+           }
+           $(".swiper-pagination").append(_topspan);
+      },'json');
+
+      $.get(newListUrl, function(data) {
+            
+            var _listhtml = '';
+
+            $.each(data.list, function(index, val) {
+                
+                _listhtml += '<div class="card demo-card-header-pic"><div valign="bottom" class="card-header color-white no-border no-padding">';
+                _listhtml += '<a href="'+videoUrl+'?id='+val.id+'"><img class="card-cover" src="/Uploads/'+val.image+'" alt=""></a>';
+                _listhtml += '</div><div class="card-content"><div class="card-content-inner">'+val.name+'</div></div>';
+                _listhtml += '<div class="card-footer"><span class="icon icon-emoji">'+val.hit+'</span><span class="icon icon-clock">'+getLocalTime('m/d/y',val.addtime)+'</span></div></div>';
+            });
+
+            $(".newvideo").append(_listhtml);
+            $.hidePreloader()
+      },'json');
+
+  });
+      
+</script>
+<include file="Common/footer" />

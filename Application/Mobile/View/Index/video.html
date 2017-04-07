@@ -1,0 +1,95 @@
+<include file="Common/header" />
+<link href="__PUBLIC__/zy.min.css" rel="stylesheet">
+<script src="__PUBLIC__/zy.min.js"></script>
+<style type="text/css">
+.my-player-dimensions{
+  width: 80%;
+  min-width: 300px;
+  height: 200px;
+  margin: 0 auto;
+}
+/* .video-js{
+  left:-3rem;
+} */
+
+</style>
+    <div class="page">
+            <header class="bar bar-nav">
+                <a class="button button-link button-nav pull-left" onclick="return window.history.back();">
+                    <span class="icon icon-left"></span>
+                    back
+                  </a>
+                <h1 class='title'></h1>
+            </header>
+            <include file="Common/nav" />
+            <div class="content">
+                <div id="content" >
+                  <div class="zy_media">
+
+                  </div>
+
+                  <script type="text/javascript">
+                    // zymedia('video');
+                  </script>
+                </div>
+        </div>
+
+    </div>
+<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+<script type="text/javascript">
+  
+  var videoUrl = "{:U('getOne')}";
+  var id = GetRequest();
+  $.showPreloader();
+  $(function(){
+
+      if (id > 0) {
+          $.post(videoUrl, {id: id}, function(data, textStatus, xhr) {
+              console.log(data);
+              if (data.status == 1) {
+                if (data.msg.id != '') {
+                    $('.title').append(data.msg.name);
+                    _html = '<video poster="/Uploads/'+data.msg.image+'" data-config=\'{"mediaTitle": "请记住我们的网站qslist.info","type":"video/mp4","preload":"auto"}\'>';
+                    _html += '<source src="'+data.msg.server+data.msg.link+'" type="video/mp4">您的浏览器不支持HTML5视频</video>';
+
+                    $('.zy_media').append(_html);
+                    zymedia('video');
+                    $.hidePreloader();
+                }else{
+                   $.hidePreloader();
+                   $.alert('没有改影片，请返回！');
+                }
+
+              }else{
+                  $.hidePreloader();
+                  $.alert(data.msg);
+              }
+          },'json');
+      }else{
+          $.hidePreloader();
+          $.alert('请勿非法操作！');
+      }
+
+  });
+
+
+      /**
+     * [GetRequest 获取url参数]
+     */
+function GetRequest() { 
+      var url = location.search; //获取url中"?"符后的字串 
+      var theRequest = new Object(); 
+      if (url.indexOf("?") != -1) { 
+      var str = url.substr(1); 
+      strs = str.split("&"); 
+      for(var i = 0; i < strs.length; i ++) { 
+      theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]); 
+      } 
+      }
+
+      return theRequest.id;
+     
+} 
+</script>
+<include file="Common/footer" />

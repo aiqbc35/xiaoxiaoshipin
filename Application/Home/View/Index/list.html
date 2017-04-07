@@ -1,0 +1,75 @@
+<include file="Common/header" />
+    <header>
+      <div class="container">
+          <div class="title"><a href="{:U('Index/index')}">Men magazine</a></div>
+      </div>
+    </header>
+    <div class="container">
+          <div class="header-box">
+              欢迎访问Men magazine!
+              <p>
+                Men magazine自动适配PC、平板、手机访问，最新网址是：http://www.qslist.info;
+              </p>
+              <p>
+                为防止网址被封导致迷路，本站提供二种永久找回方式。<br/>方式一：请发送任意内容至qslistlink@mail.ru自动获取最新网址(敬请将本邮件添加至您邮箱以防忘记).<br/>
+                方式二：最新网址发布站：http://ameblo.jp/qslistlink/<br/>
+              </p>
+          </div>
+    </div>
+    <div class="container">        
+        <div class="wrapper">
+            <h2>MOVIE LIST</h2>
+            <div class="row" id="newlist">
+                
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <nav role="navigation">
+              <ul class="cd-pagination">
+                {$show}
+              </ul>
+            </nav>
+        </div>
+
+    </div>
+    
+    <script type="text/javascript">
+
+        var  newListUrl = "{:U('getMovieList')}";
+        var videoUrl = "{:U('video')}";
+        var localurl = window.location.href;
+        var urlxiahua = localurl.split("/");
+        var urlnum = urlxiahua.length - 1
+        var pageid = urlxiahua[urlnum].split('.');
+       
+        window.onload=function(){ 
+            pageid = pageid[0]>0 ? pageid[0] : 0;
+             $('#myModal').modal('show');
+          $.get(newListUrl,{page:pageid}, function(data) {
+              if (data.total > 0) {
+                  if (data.list.length > 0) {
+                       _html = createTop(data);                 
+                      $("#newlist").append(_html);
+                  }else{
+                      _html = '<div class="alert alert-danger" role="alert"><a href="'+localurl+'">已经是最后一页，请点击返回浏览</a></div>';
+                      $("#newlist").append(_html);
+                  }
+                 $('#myModal').modal('hide');
+              }
+          },'json');
+
+        }
+
+        function createTop (data){
+            var _tophtml = '';
+            $.each(data.list, function(index, val) {
+               _tophtml += '<div class="col-md-2"><a href="'+videoUrl+'?id='+val.id+'">';
+               _tophtml += '<img src="/Uploads/'+val.image+'" class="img1" alt=""></a><p class="txt2">';
+              _tophtml += '<a href="'+videoUrl+'?id='+val.id+'">'+val.name+'</a></p></div>'
+            });
+            return _tophtml;
+        }
+
+    </script>
+<include file="Common/footer" />
